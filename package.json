@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack ",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "dev-server": "webpack serve --mode development",
     "test": "jest --config=jest.config.json --runInBand"
   },
@@ -22,6 +23,7 @@
     "enzyme-to-json": "^3.6.2",
     "jest": "^27.3.1",
     "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^2.4.3",
     "moment": "^2.29.1",
     "node-sass": "^6.0.1",
     "normalize.css": "^8.0.1",
