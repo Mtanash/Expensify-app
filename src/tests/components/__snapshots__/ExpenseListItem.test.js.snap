@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItem with first expense in expenses fixtures 1`] = `
+<div>
+  <Link
+    to="/edit/1"
+  >
+    <h2>
+      Gum
+    </h2>
+  </Link>
+  <p>
+    Amount: 
+    195
+  </p>
+  <p>
+    Created At: 
+    0
+  </p>
+</div>
+`;
