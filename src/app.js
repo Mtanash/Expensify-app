@@ -13,19 +13,6 @@ import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 
 const store = configureStore();
-store.dispatch(
-  addExpense({ description: "Water bill", amount: 60, createdAt: 400 })
-);
-store.dispatch(
-  addExpense({ description: "Gas bill", amount: 100, createdAt: 300 })
-);
-store.dispatch(
-  addExpense({ description: "rent bill", amount: 10, createdAt: 200 })
-);
-
-console.log(
-  getVisibleExpenses(store.getState().expenses, store.getState().filters)
-);
 
 ReactDOM.render(
   <Provider store={store}>
