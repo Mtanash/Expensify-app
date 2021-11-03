@@ -10,12 +10,9 @@ exports[`should render ExpenseListItem with first expense in expenses fixtures 1
     </h2>
   </Link>
   <p>
-    Amount: 
-    195
-  </p>
-  <p>
-    Created At: 
-    0
+    $195.00
+    -
+    January 1O, 1970
   </p>
 </div>
 `;
