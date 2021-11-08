@@ -1,4 +1,4 @@
-import { push, ref, set } from "@firebase/database";
+import { get, push, ref, set } from "@firebase/database";
 import { database } from "../firebase/firebase";
 
 const addExpense = (expense) => ({
@@ -40,4 +40,29 @@ const editExpense = (id, updates) => ({
   updates,
 });
 
-export { addExpense, removeExpense, editExpense };
+const setExpenses = (expenses) => ({
+  type: "SET_EXPENSES",
+  expenses,
+});
+
+const startSetExpenses = (expenses) => {
+  return (dispatch) => {
+    return get(ref(database, "expenses")).then((snapshot) => {
+      const expenses = [];
+      if (snapshot.exists()) {
+        snapshot.forEach((snap) => {
+          expenses.push({ id: snap.key, ...snap.val() });
+        });
+      }
+      dispatch(setExpenses(expenses));
+    });
+  };
+};
+
+export {
+  addExpense,
+  removeExpense,
+  editExpense,
+  setExpenses,
+  startSetExpenses,
+};
