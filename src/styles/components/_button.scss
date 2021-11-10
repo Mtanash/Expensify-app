@@ -1,0 +1,21 @@
+.button {
+  background-color: $blue;
+  color: #fff;
+  font-size: $font-size-large;
+  font-weight: 500;
+  padding: $s-size;
+  outline: none;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.button--transparent {
+  background-color: transparent;
+}
+
+.button--secondary {
+  background-color: #888;
+}

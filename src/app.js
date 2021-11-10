@@ -5,6 +5,7 @@ import AppRouter, { history } from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
 import { startSetExpenses } from "./actions/expenses";
 import { login, logout } from "./actions/auth";
+import LoadingPage from "./components/LoadingPage";
 
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
@@ -16,7 +17,7 @@ const store = configureStore();
 
 const auth = getAuth();
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
+ReactDOM.render(<LoadingPage />, document.getElementById("app"));
 
 let hasRendered = false;
 const renderApp = () => {
